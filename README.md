@@ -53,6 +53,21 @@ where `IMAGE_FOLDER_PATH` is the directory where the images of the scene are. Th
 
 ## Evaluate on the provided scenes from the ARKitScenes and BundleFusion datasets
 
+### 1. Evaluation in ARKitScenes
+
+Download the data following the official instructions from [here](https://github.com/apple/ARKitScenes/blob/main/DATA.md). The scenes tested are from the 3dod dataset. You need to create a directory called arkitscenes with the following structure, at the root directory of that project. When dowloading the data there will be some extra subfolders which you can simply remove  The directory should have the following format:
+
+```
+arkitscenes
+      ├── 40753679                           
+      ├── 40777060                     
+      ├── 40809740                           
+      ├── 47331040                 
+      └── 47331127 
+      ├── 47332493                 
+      └── 47333687           
+```
+
 From the root directory of the project run:
 
 ```
