@@ -55,7 +55,7 @@ where `IMAGE_FOLDER_PATH` is the directory where the images of the scene are. Th
 
 ### 1. Evaluation in ARKitScenes
 
-Download the data following the official instructions from [here](https://github.com/apple/ARKitScenes/blob/main/DATA.md). The scenes tested are from the 3dod dataset. You need to create a directory called arkitscenes with the following structure, at the root directory of that project. When dowloading the data there will be some extra subfolders which you can simply remove  The directory should have the following format:
+Download the data following the official instructions from [here](https://github.com/apple/ARKitScenes/blob/main/DATA.md). The scenes tested are from the 3dod dataset. You need to create a directory called arkitscenes with the following structure, at the root directory of that project. When dowloading the data there will be some extra subfolders which you can simply remove to get to the required format. The directory should have the following format:
 
 ```
 arkitscenes
@@ -68,13 +68,26 @@ arkitscenes
       └── 47333687           
 ```
 
-From the root directory of the project run:
+You can of course add more scenes to further test the method.
+
+To evaluate you can run rrom the root directory of the project the following:
 
 ```
-python evaluate_estimation.py --dataset_dir ./arkitscenes --eval_dataset arkitscenes # for arkitscenes
+python evaluate_estimation.py --dataset_dir ./arkitscenes --eval_dataset arkitscenes
 ```
-or
-```
-python evaluate_estimation.py --dataset_dir ./bundlefusion --eval_dataset bundlefusion # for bundlefusion
 
+### 2. Evaluation in BundleFusion scenes
+
+Download the data from [here](https://graphics.stanford.edu/projects/bundlefusion/). You need to create a directory called bundlefusion with the following structure, at the root directory of that project. The directory should have the following format:
+
+```
+bundlefusion
+      ├── copyroom                           
+      ├── office3                               
+```
+
+To evaluate you can run rrom the root directory of the project the following:
+
+```
+python evaluate_estimation.py --dataset_dir ./bundlefusion --eval_dataset bundlefusion
 ```
